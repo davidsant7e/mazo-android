@@ -28,7 +28,9 @@ Editar `nucleo/Catalogo.kt` (número, nombre, proyecto, paquete, repo, APK) y, s
 
 ## Instalar
 
-Android Studio → abrir la carpeta → Run, o `C:\Git\compilar-todo.bat` → I.
+**Sin el PC**: cada cambio se compila en GitHub y el APK queda en [releases/ultima](https://github.com/davidsant7e/mazo-android/releases/tag/ultima) → descargar `el-mazo.apk` en el celular.
+
+**Con el PC**: Android Studio → abrir la carpeta → Run, o `C:\Git\compilar-todo.bat` → I.
 
 ## Cómo está hecho
 

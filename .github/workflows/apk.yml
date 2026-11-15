@@ -1,0 +1,50 @@
+# Compila la app en GitHub (sin necesidad del PC) y publica el APK para instalarlo desde el celular:
+# https://github.com/davidsant7e/mazo-android/releases/tag/ultima
+name: APK
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  compilar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+
+      # El Android SDK ya viene instalado en las máquinas de GitHub (ANDROID_HOME); Gradle baja lo que falte.
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Pruebas y APK
+        run: |
+          chmod +x gradlew
+          ./gradlew --no-daemon testDebugUnitTest assembleDebug
+
+      - name: Nombre del APK
+        run: cp app/build/outputs/apk/debug/app-debug.apk el-mazo.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: el-mazo-apk
+          path: el-mazo.apk
+
+      - name: Publicar en «ultima»
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ultima
+          name: El Mazo (última compilación)
+          prerelease: true
+          files: el-mazo.apk
+          body: |
+            APK de prueba compilado automáticamente desde `main` (${{ github.sha }}).
+            En el celular: descarga **el-mazo.apk** → ábrelo → permite «Instalar apps desconocidas» para el navegador → Instalar.

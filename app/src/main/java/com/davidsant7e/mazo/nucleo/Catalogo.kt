@@ -58,7 +58,7 @@ object Catalogo {
     /** Los 22 Arcanos Mayores. Al agregar un proyecto nuevo, se cambia su carta aquí. */
     val cartas: List<Carta> = listOf(
         Carta(0, "El Loco", "El Mazo", "Este lanzador: todas las cartas en un solo lugar.", Plataforma.ANDROID,
-            paquete = "com.davidsant7e.mazo", repo = GH + "mazo-android"),
+            paquete = "com.davidsant7e.mazo", repo = GH + "mazo-android", apk = apk("mazo-android", "el-mazo.apk")),
         Carta(1, "El Mago", "El Mago", "Escribir en el PC desde el celular.", Plataforma.ANDROID,
             paquete = "com.davidsant7e.mago", repo = GH + "el-mago", donde = "también en el PC con Windows"),
         Carta(2, "La Sacerdotisa", "La Sacerdotisa", "Corrector que explica cada cambio.", Plataforma.ANDROID,
