@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Android 11+ solo deja ver las apps que se nombran aquí: las de los Arcanos. -->
+    <queries>
+        <package android:name="com.davidsant7e.mago" />
+        <package android:name="com.davidsant7e.sacerdotisa" />
+        <package android:name="com.davidsant7e.emperatriz" />
+        <package android:name="com.davidsant7e.emperador" />
+        <package android:name="com.codelock.app" />
+        <package android:name="com.davidsant7e.carro" />
+        <package android:name="com.davidsant7e.templanza" />
+        <package android:name="com.audionovel.app" />
+        <package android:name="com.dseu1.miccheck" />
+    </queries>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Mazo">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- Mantener presionado el ícono → «Enviar registro». -->
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/atajos_registro" />
+        </activity>
+
+        <!-- Registro (log) de la app: arranca solo con el proceso; se comparte desde el atajo del ícono. -->
+        <provider
+            android:name="com.davidsant7e.mazo.registro.RegistroInicio"
+            android:authorities="${applicationId}.registro"
+            android:exported="false"
+            android:initOrder="1000" />
+        <activity
+            android:name="com.davidsant7e.mazo.registro.EnviarRegistroActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:taskAffinity=""
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    </application>
+</manifest>
