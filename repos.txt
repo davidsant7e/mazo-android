@@ -1,0 +1,17 @@
+# Repos del mazo: carpeta en C:\Git y URL. actualizar-todo.bat clona los que falten.
+# Al crear un proyecto nuevo, agregarlo aquí (y en nucleo/Catalogo.kt si es Android).
+audionovel-android https://github.com/davidsant7e/audionovel-android
+audionovel-desktop https://github.com/davidsant7e/audionovel-desktop
+codelock-android https://github.com/davidsant7e/codelock-android
+codelock-windows https://github.com/davidsant7e/codelock-windows
+el-carro-android https://github.com/davidsant7e/el-carro-android
+el-mago https://github.com/davidsant7e/el-mago
+el-mundo https://github.com/davidsant7e/el-mundo
+emperador-android https://github.com/davidsant7e/emperador-android
+emperatriz-android https://github.com/davidsant7e/emperatriz-android
+girar-pantalla https://github.com/davidsant7e/girar-pantalla
+justicia https://github.com/davidsant7e/justicia
+mazo-android https://github.com/davidsant7e/mazo-android
+miccheck-android https://github.com/davidsant7e/miccheck-android
+sacerdotisa https://github.com/davidsant7e/sacerdotisa
+templanza-android https://github.com/davidsant7e/templanza-android

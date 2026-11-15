@@ -20,6 +20,8 @@ data class Carta(
     val apk: String? = null,
     /** Dónde corre si no es (solo) Android: «PC con Windows», «VS Code»… */
     val donde: String? = null,
+    /** Trabaja en segundo plano: conviene «batería sin restricciones». */
+    val bateria: Boolean = false,
 ) {
     val romano: String get() = Romanos.de(numero)
     val titulo: String get() = "$romano · $nombre"
@@ -60,7 +62,7 @@ object Catalogo {
         Carta(0, "El Loco", "El Mazo", "Este lanzador: todas las cartas en un solo lugar.", Plataforma.ANDROID,
             paquete = "com.davidsant7e.mazo", repo = GH + "mazo-android", apk = apk("mazo-android", "el-mazo.apk")),
         Carta(1, "El Mago", "El Mago", "Escribir en el PC desde el celular.", Plataforma.ANDROID,
-            paquete = "com.davidsant7e.mago", repo = GH + "el-mago", donde = "también en el PC con Windows"),
+            paquete = "com.davidsant7e.mago", repo = GH + "el-mago", donde = "también en el PC con Windows", bateria = true),
         Carta(2, "La Sacerdotisa", "La Sacerdotisa", "Corrector que explica cada cambio.", Plataforma.ANDROID,
             paquete = "com.davidsant7e.sacerdotisa", repo = GH + "sacerdotisa", donde = "también en Windows y el navegador"),
         Carta(3, "La Emperatriz", "La Emperatriz", "Lista de compras por proyectos, precios con Gemini.", Plataforma.ANDROID,
@@ -69,7 +71,7 @@ object Catalogo {
         Carta(4, "El Emperador", "El Emperador", "Inventario de la casa, orientación y soleamiento.", Plataforma.ANDROID,
             paquete = "com.davidsant7e.emperador", repo = GH + "emperador-android"),
         Carta(5, "El Hierofante", "CodeLock", "Una pregunta para aprender al desbloquear.", Plataforma.ANDROID,
-            paquete = "com.codelock.app", repo = GH + "codelock-android", donde = "también en Windows"),
+            paquete = "com.codelock.app", repo = GH + "codelock-android", donde = "también en Windows", bateria = true),
         Carta(6, "Los Enamorados", "", "", Plataforma.LIBRE),
         Carta(7, "El Carro", "El Carro", "Rutas alternativas en carro y moto, varias paradas.", Plataforma.ANDROID,
             paquete = "com.davidsant7e.carro", repo = GH + "el-carro-android",
@@ -84,11 +86,11 @@ object Catalogo {
         Carta(12, "El Colgado", "", "", Plataforma.LIBRE),
         Carta(13, "La Muerte", "", "", Plataforma.LIBRE),
         Carta(14, "La Templanza", "La Templanza", "Horas en Azure DevOps Boards.", Plataforma.ANDROID,
-            paquete = "com.davidsant7e.templanza"),
+            paquete = "com.davidsant7e.templanza", bateria = true),
         Carta(15, "El Diablo", "", "", Plataforma.LIBRE),
         Carta(16, "La Torre", "", "", Plataforma.LIBRE),
         Carta(17, "La Estrella", "AudioNovel", "Novelas traducidas en audio, retoma donde quedaste.", Plataforma.ANDROID,
-            paquete = "com.audionovel.app", donde = "la traducción y el audio se hacen en el PC"),
+            paquete = "com.audionovel.app", donde = "la traducción y el audio se hacen en el PC", bateria = true),
         Carta(18, "La Luna", "", "", Plataforma.LIBRE),
         Carta(19, "El Sol", "El Sol", "Escenarios de prueba y pruebas de punta a punta.", Plataforma.OTRA,
             repo = GH + "el-sol", donde = "VS Code y Kiro"),

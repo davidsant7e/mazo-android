@@ -50,6 +50,23 @@ class Apps(private val ctx: Context) {
         "ajustes", paquete,
     )
 
+    /** Abre el ajuste de Android que corresponde a un requisito. */
+    fun ajuste(paquete: String, a: com.davidsant7e.mazo.nucleo.Ajuste): Boolean {
+        val uri = Uri.parse("package:$paquete")
+        val i = when (a) {
+            com.davidsant7e.mazo.nucleo.Ajuste.ACCESIBILIDAD -> Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)
+            com.davidsant7e.mazo.nucleo.Ajuste.SUPERPOSICION -> Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, uri)
+            com.davidsant7e.mazo.nucleo.Ajuste.ADB -> Intent(Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS)
+            else -> Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, uri)
+        }.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        return iniciar(i, "ajuste_" + a.name.lowercase(), paquete) || ajustes(paquete)
+    }
+
+    /** Opciones de desarrollador (depuración USB). */
+    fun opcionesDesarrollador(): Boolean = iniciar(
+        Intent(Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK), "desarrollador", "ajustes",
+    ) || iniciar(Intent(Settings.ACTION_DEVICE_INFO_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK), "acerca", "ajustes")
+
     fun enlace(url: String): Boolean =
         iniciar(Intent(Intent.ACTION_VIEW, Uri.parse(url)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK), "enlace", url)
 
