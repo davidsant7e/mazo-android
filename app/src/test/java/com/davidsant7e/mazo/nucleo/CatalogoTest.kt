@@ -30,14 +30,14 @@ class CatalogoTest {
         assertEquals(listOf(7, 17), v.enEsteCelular.map { it.numero })
         // El Mazo no se lista a sí mismo.
         assertTrue(v.sinInstalar.none { it.numero == 0 })
-        assertEquals(listOf(1, 2, 3, 4, 5, 14, 20), v.sinInstalar.map { it.numero })
+        assertEquals(listOf(1, 2, 3, 4, 5, 6, 14, 20), v.sinInstalar.map { it.numero })
         assertEquals(listOf(9, 10, 11, 19, 21), v.otrasPlataformas.map { it.numero })
-        assertEquals(listOf(6, 8, 12, 13, 15, 16, 18), v.libres.map { it.numero })
+        assertEquals(listOf(8, 12, 13, 15, 16, 18), v.libres.map { it.numero })
     }
 
     @Test fun `apk solo en repos publicos con CI`() {
         val conApk = Catalogo.cartas.filter { it.apk != null }.map { it.numero }
-        assertEquals(listOf(0, 3, 7), conApk)
+        assertEquals(listOf(0, 3, 6, 7), conApk)
         assertTrue(Catalogo.cartas.mapNotNull { it.apk }.all { it.startsWith("https://github.com/davidsant7e/") && it.endsWith(".apk") })
     }
 }

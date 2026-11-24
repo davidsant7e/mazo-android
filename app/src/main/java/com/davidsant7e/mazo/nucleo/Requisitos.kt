@@ -43,7 +43,7 @@ object Requisitos {
         "${P}POST_NOTIFICATIONS" to ("Notificaciones" to "Para avisarte (recordatorios, estado, controles)."),
         "${P}ACCESS_FINE_LOCATION" to ("Ubicación" to "Para tu posición (rutas, ubicación de la casa)."),
         "${P}RECORD_AUDIO" to ("Micrófono" to "Para medir, probar y grabar el micrófono."),
-        "${P}BLUETOOTH_CONNECT" to ("Dispositivos Bluetooth" to "Para usar audífonos o el casco por Bluetooth."),
+        "${P}BLUETOOTH_CONNECT" to ("Dispositivos Bluetooth" to "Para usar audífonos, el casco o el reloj por Bluetooth."),
         "${P}CAMERA" to ("Cámara" to "Para tomar fotos dentro de la app."),
         "${P}READ_PHONE_STATE" to ("Estado del teléfono" to "Para saber si estás en una llamada."),
     )

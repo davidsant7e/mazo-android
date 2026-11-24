@@ -10,6 +10,7 @@
         <package android:name="com.davidsant7e.sacerdotisa" />
         <package android:name="com.davidsant7e.emperatriz" />
         <package android:name="com.davidsant7e.emperador" />
+        <package android:name="com.davidsant7e.enamorados" />
         <package android:name="com.codelock.app" />
         <package android:name="com.davidsant7e.carro" />
         <package android:name="com.davidsant7e.templanza" />
