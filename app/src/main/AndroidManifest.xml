@@ -15,6 +15,7 @@
         <package android:name="com.davidsant7e.carro" />
         <package android:name="com.davidsant7e.templanza" />
         <package android:name="com.audionovel.app" />
+        <package android:name="com.davidsant7e.luna" />
         <package android:name="com.dseu1.miccheck" />
     </queries>
 
