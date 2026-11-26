@@ -38,6 +38,6 @@ class CatalogoTest {
     @Test fun `apk solo en repos publicos con CI`() {
         val conApk = Catalogo.cartas.filter { it.apk != null }.map { it.numero }
         assertEquals(listOf(0, 3, 6, 7, 18), conApk)
-        assertTrue(Catalogo.cartas.mapNotNull { it.apk }.all { it.startsWith("https://github.com/davidsant7e/") && it.endsWith(".apk") })
+        assertTrue(Catalogo.cartas.mapNotNull { it.apk }.all { it.startsWith("https://github.com/el-ermitanho/") && it.endsWith(".apk") })
     }
 }

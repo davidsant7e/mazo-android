@@ -1,5 +1,5 @@
 # Compila la app en GitHub (sin necesidad del PC) y publica el APK para instalarlo desde el celular:
-# https://github.com/davidsant7e/mazo-android/releases/tag/ultima
+# https://github.com/el-ermitanho/mazo-android/releases/tag/ultima
 name: APK
 
 on:

@@ -20,8 +20,11 @@ sealed interface Comparacion {
 object Versiones {
     /** URL del último commit de la rama principal (API pública de GitHub). */
     fun url(repo: String): String {
-        val nombre = repo.trimEnd('/').substringAfterLast('/')
-        return "https://api.github.com/repos/davidsant7e/$nombre/commits/main"
+        // «https://github.com/<dueño>/<repo>»: el dueño sale de la URL (26 nov: el usuario pasó a el-ermitanho).
+        val partes = repo.trimEnd('/').split('/')
+        val nombre = partes.last()
+        val duenio = partes.getOrNull(partes.size - 2)?.takeIf { it.isNotBlank() && !it.contains('.') } ?: "el-ermitanho"
+        return "https://api.github.com/repos/$duenio/$nombre/commits/main"
     }
 
     /** Lee la respuesta de GitHub (`GET /repos/{dueño}/{repo}/commits/main`). */

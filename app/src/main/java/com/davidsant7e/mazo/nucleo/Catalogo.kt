@@ -54,7 +54,7 @@ object Romanos {
 }
 
 object Catalogo {
-    private const val GH = "https://github.com/davidsant7e/"
+    private const val GH = "https://github.com/el-ermitanho/"
     private fun apk(repo: String, archivo: String) = "${GH}$repo/releases/download/ultima/$archivo"
 
     /** Los 22 Arcanos Mayores. Al agregar un proyecto nuevo, se cambia su carta aquí. */
@@ -80,7 +80,7 @@ object Catalogo {
             apk = apk("el-carro-android", "el-carro.apk")),
         Carta(8, "La Fuerza", "", "", Plataforma.LIBRE),
         Carta(9, "El Ermitaño", "Perfil de GitHub", "El mazo en el perfil de GitHub.", Plataforma.OTRA,
-            repo = GH + "davidsant7e", donde = "Web"),
+            repo = GH + "el-ermitanho", donde = "Web"),
         Carta(10, "La Rueda", "GirarPantalla", "Girar la pantalla y accesos rápidos.", Plataforma.OTRA,
             repo = GH + "girar-pantalla", donde = "PC con Windows"),
         Carta(11, "La Justicia", "La Justicia", "Revisa el commit y sugiere el mensaje.", Plataforma.OTRA,

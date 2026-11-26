@@ -1,19 +1,19 @@
 # Repos del mazo: carpeta en C:\Git y URL. actualizar-todo.bat clona los que falten.
 # Al crear un proyecto nuevo, agregarlo aquí (y en nucleo/Catalogo.kt si es Android).
-audionovel-android https://github.com/davidsant7e/audionovel-android
-audionovel-desktop https://github.com/davidsant7e/audionovel-desktop
-codelock-android https://github.com/davidsant7e/codelock-android
-codelock-windows https://github.com/davidsant7e/codelock-windows
-el-carro-android https://github.com/davidsant7e/el-carro-android
-el-mago https://github.com/davidsant7e/el-mago
-el-mundo https://github.com/davidsant7e/el-mundo
-emperador-android https://github.com/davidsant7e/emperador-android
-emperatriz-android https://github.com/davidsant7e/emperatriz-android
-girar-pantalla https://github.com/davidsant7e/girar-pantalla
-los-enamorados-android https://github.com/davidsant7e/los-enamorados-android
-justicia https://github.com/davidsant7e/justicia
-la-luna-android https://github.com/davidsant7e/la-luna-android
-mazo-android https://github.com/davidsant7e/mazo-android
-miccheck-android https://github.com/davidsant7e/miccheck-android
-sacerdotisa https://github.com/davidsant7e/sacerdotisa
-templanza-android https://github.com/davidsant7e/templanza-android
+audionovel-android https://github.com/el-ermitanho/audionovel-android
+audionovel-desktop https://github.com/el-ermitanho/audionovel-desktop
+codelock-android https://github.com/el-ermitanho/codelock-android
+codelock-windows https://github.com/el-ermitanho/codelock-windows
+el-carro-android https://github.com/el-ermitanho/el-carro-android
+el-mago https://github.com/el-ermitanho/el-mago
+el-mundo https://github.com/el-ermitanho/el-mundo
+emperador-android https://github.com/el-ermitanho/emperador-android
+emperatriz-android https://github.com/el-ermitanho/emperatriz-android
+girar-pantalla https://github.com/el-ermitanho/girar-pantalla
+los-enamorados-android https://github.com/el-ermitanho/los-enamorados-android
+justicia https://github.com/el-ermitanho/justicia
+la-luna-android https://github.com/el-ermitanho/la-luna-android
+mazo-android https://github.com/el-ermitanho/mazo-android
+miccheck-android https://github.com/el-ermitanho/miccheck-android
+sacerdotisa https://github.com/el-ermitanho/sacerdotisa
+templanza-android https://github.com/el-ermitanho/templanza-android

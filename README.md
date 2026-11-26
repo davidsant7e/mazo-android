@@ -31,7 +31,7 @@ Editar `nucleo/Catalogo.kt` (número, nombre, proyecto, paquete, repo, APK, bate
 
 ## Instalar
 
-**Sin el PC**: cada cambio se compila en GitHub y el APK queda en [releases/ultima](https://github.com/davidsant7e/mazo-android/releases/tag/ultima) → descargar `el-mazo.apk` en el celular.
+**Sin el PC**: cada cambio se compila en GitHub y el APK queda en [releases/ultima](https://github.com/el-ermitanho/mazo-android/releases/tag/ultima) → descargar `el-mazo.apk` en el celular.
 
 **Con el PC**: Android Studio → abrir la carpeta → Run, o `C:\Git\compilar-todo.bat` → I.
 
@@ -39,4 +39,4 @@ Editar `nucleo/Catalogo.kt` (número, nombre, proyecto, paquete, repo, APK, bate
 
 Kotlin + Jetpack Compose, minSdk 26, mismo esqueleto que las demás apps. `nucleo/Catalogo.kt` es puro (con pruebas); `datos/Apps.kt` habla con el PackageManager; `ui/` la pantalla de cartas. Sin permisos especiales: solo `<queries>` con los paquetes de los Arcanos.
 
-Parte del mazo de [davidsant7e](https://github.com/davidsant7e).
+Parte del mazo de [el-ermitanho](https://github.com/el-ermitanho).

@@ -51,6 +51,6 @@ class RequisitosTest {
         assertTrue(Versiones.comparar(t - 3_600_000, u) is Comparacion.HayCambios)
         assertTrue(Versiones.comparar(t, null, "privado") is Comparacion.SinDato)
         assertNull(Versiones.leer("{}"))
-        assertEquals("https://api.github.com/repos/davidsant7e/el-carro-android/commits/main", Versiones.url("https://github.com/davidsant7e/el-carro-android"))
+        assertEquals("https://api.github.com/repos/el-ermitanho/el-carro-android/commits/main", Versiones.url("https://github.com/el-ermitanho/el-carro-android"))
     }
 }
